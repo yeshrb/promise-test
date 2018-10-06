@@ -1,4 +1,4 @@
-import {expect} from 'chai';
+// import {expect} from 'chai';
 
 class Promise {
     constructor(){
@@ -9,15 +9,16 @@ class Promise {
 describe('Promise',function() {
 
     it('是一个函数',()=>{
-       expect(typeof Promise).to.equal('function')
+       expect(typeof Promise).toEqual('function')
     });
     it('有三个状态',()=>{
         let promise = new Promise();
-        expect(promise.states).to.deep.equal(['Pending', 'Fullfilled', 'Rejected']);
+        expect(promise.states).toEqual(['Pending', 'Fullfilled', 'Rejected']);
     });
-    it.only('必须提供一个then方法',()=>{
-        for (let prototypeKey in Promise.prototype) {
-            console.log(prototypeKey);
-        }
+    it('必须提供一个then方法',()=>{
+        // for (let prototypeKey in Promise.prototype) {
+        //     expect(true).toBe(false);
+        // }
+        expect(true).toBe(false);
     });
 });
